@@ -1,0 +1,43 @@
+*multicolor.txt* Dark colorscheme for Vim/NeoVim
+*multicolor*
+
+================================================================================
+CONTENTS						                           *multicolor-contents*
+
+    01. Introduction ........................................ |multicolor-intro|
+    02. Configuration ...................................... |multicolor-config|
+    03. License ........................................... |multicolor-license|
+
+================================================================================
+INTRODUCTION                                                  *multicolor-intro*
+
+multicolor.vim is a colorscheme for Vim/NeoVim based off the multicolor theme
+from awesome-copycats (https://github.com/lcpz/awesome-copycats) for Awesome WM.
+It also includes an Xresources file with colors for the 16-color terminal
+pallet; it shouldn't be too hard to adapt that to your favorite terminal
+emulator.
+
+The code is based off of onedark.vim (https://github.com/joshdick/onedark.vim).
+
+================================================================================
+CONFIGURATION                                                *multicolor-config*
+
+                                                 *g:multicolor_terminal_italics*
+g:multicolor_terminal_italics
+            Whether to use italics in syntax highlighting (usually for
+            comments).
+
+            Default value: 0
+
+                                                       *g:multicolor_termcolors*
+g:multicolor_termcolors
+            The color pallet to use. Supported values are 16 and 256.
+
+            Default value: 256
+
+================================================================================
+LICENSE                                                     *multicolor-license*
+
+MIT License. Copyright © 2018 Zach Peltzer
+
+ vim:ft=help:tw=80:
