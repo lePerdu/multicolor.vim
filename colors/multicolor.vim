@@ -31,6 +31,10 @@ if !exists("g:multicolor_terminal_italics")
   let g:multicolor_terminal_italics = 0
 endif
 
+if !exists("g:multicolor_disable_background")
+  let g:multicolor_disable_background = 0
+endif
+
 " This function is based on one from onedark.vim: https://github.com/joshdick/onedark.vim
 let s:group_colors = {} " Cache of default highlight group settings, for later reference via `multicolor#extend_highlight`
 function! s:h(group, style, ...)
@@ -95,6 +99,7 @@ endfunction
 
 let s:colors = multicolor#GetColors()
 
+let s:none = { "gui": "NONE", "cterm": "NONE", "cterm16": "0"}
 let s:red = s:colors.red
 let s:dark_red = s:colors.dark_red
 let s:green = s:colors.green
@@ -189,7 +194,7 @@ call s:h("MatchParen", { "fg": s:blue, "gui": "underline" }) " The character und
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-call s:h("Normal", { "fg": s:white, "bg": s:black }) " normal text
+call s:h("Normal", { "fg": s:white, "bg": g:multicolor_disable_background ? s:none : s:black }) " normal text
 call s:h("Pmenu", { "bg": s:menu_grey }) " Popup menu: normal item.
 call s:h("PmenuSel", { "fg": s:orange, "bg": s:menu_grey }) " Popup menu: selected item.
 call s:h("PmenuSbar", { "bg": s:special_grey }) " Popup menu: scrollbar.

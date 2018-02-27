@@ -75,11 +75,15 @@ multicolor theme from
 
 **Note:** All options should be set **before** the `colorscheme multicolor
 
-* `g:multicolor\_termcolors` **(see [Troubleshooting](#troubleshooting) (below)
+* `g:multicolor_termcolors` **(see [Troubleshooting](#troubleshooting) (below)
   for more information about this option)**: Set to `256` for 256-color
   terminals (the default), or set to `16` to use your terminal emulator's native
   16 colors.
 
-* `g:multicolor\_terminal\_italics`: Set to `1` if your terminal emulator supports
+* `g:multicolor_terminal_italics`: Set to `1` if your terminal emulator supports
   italics; `0` otherwise (the default).
+
+* `g:multicolor_disable_background`: Set to `1` to disable the background for
+  normal text (mainly so that the terminal emulator's transparency is not
+  covered up); `0` to enable it (the default).
 

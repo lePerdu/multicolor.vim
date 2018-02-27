@@ -35,6 +35,13 @@ g:multicolor_termcolors
 
             Default value: 256
 
+                                               *g:multicolor_disable_background*
+g:multicolor_disable_background
+            Whether to disable the background (mainly to avoid covering up
+            transparency from the terminal emulator).
+
+            Default value: 0
+
 ================================================================================
 LICENSE                                                     *multicolor-license*
 
