@@ -73,7 +73,7 @@ multicolor theme from
 
 ## Options
 
-**Note:** All options should be set **before** the `colorscheme multicolor
+**Note:** All options should be set **before** the `colorscheme multicolor`
 
 * `g:multicolor_termcolors` **(see [Troubleshooting](#troubleshooting) (below)
   for more information about this option)**: Set to `256` for 256-color
